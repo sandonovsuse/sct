@@ -218,12 +218,11 @@ module Yast
             HBox(
               VSpacing(18), # force height
               HSpacing(0.7),
-              LogView(
-                Id(:log), 
-                "",
-                3, # height
-                0
-              ), # number of lines to show
+              RichText(
+                Id(:log),
+                Opt(:autoScrollDown, :key_F9, :plainText),
+                ""
+              ), 
               HSpacing(0.7)
             )
           ),
